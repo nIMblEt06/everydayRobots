@@ -181,3 +181,107 @@ body{
     font-size: 5vw;
     margin-left: 10vw;
 }
+.caroCont{
+    margin-top: 25px;
+    margin-left: 10vw;
+}
+.carousel picture img{
+    width: 80%;
+}
+#contentOof{
+    display: flex;
+    margin-left: 25vw;
+    margin-right: 7vw;
+    line-height: 1.7;
+    font-size: 19px;
+    color: #262626;
+    padding-bottom: 14vh;
+}
+.right{
+    padding-left:5vw;
+}
+.left{
+    padding-right: 4vw;
+}
+.left video{
+    margin-top: 10vh;
+    margin-left: -25vw;
+    width: 100%;
+}
+#footContainer{
+    background-color: #11100e;
+    color: white;
+    padding-top: 8vh;
+    padding-inline: 4vw;
+}
+.discover{
+    font-family: CalibreB;
+    font-size: 2.6vw;
+}
+.journey{
+    margin-top: 25px;
+    justify-content: space-between;
+    border-bottom: 1px solid #292827;
+}
+#main{
+    font-family: CalibreB;
+    font-size: 16vw;
+    cursor: pointer;
+}
+#detail{
+    font-size: 19px;
+    line-height: 1.7;
+}
+.preFooter{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #292827;
+    padding-bottom: 4rem;
+}
+.right2{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    line-height: 2.5;
+}
+.column{
+    flex-direction: column;   
+}
+.navi{
+    font-family: CalibreM;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.navi:hover{
+    color: #ffad00;
+}
+.icon{
+    margin-top: 41px;
+    margin-left: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: solid #666666 1px;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.icon:hover{
+    border: solid white 1px;
+}
+.icon i{
+    transform: translate(20px, 20px);
+}
+.footer{
+    margin-top: 1rem;
+    font-family: CalibreR;
+    color:#888887;
+    padding-bottom: 1rem;
+}
+.rounded{
+    width: 60px;
+    height: 60px;
+    background-color: #ffad00;
+    border-radius: 50%;
+}
