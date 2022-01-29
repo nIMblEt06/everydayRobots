@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+#menuNav{
+    content: '';
+    position: absolute;
+    transform: translate(30px,-10px);
+    height: 40px;
+    width: 40px;
+    background: #ffad00;
+    border-radius: 50%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.wrapper{
+    /* display: block; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: -1;
+    transition: all 1s;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+}

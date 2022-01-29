@@ -9,22 +9,50 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/favicon.svg" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+    
     <title>Home | Everyday Robots</title>
 </head>
 <body>
-    <nav class=" nav">
+    <nav class=" nav fixed-top">
         <div id ="name" class= "heading"><span>Everyday <br> Robots</span> </div>
-        <div id="Menu"><span> <b>Home</b></span></div>
+        <div id="Menu" onmouseover="change()">
+            <span id ="navig"> Home</span>
+            <span id ="menuNav" onclick="toggle()"></span>
+        </div>
     </nav>
+    <div class="wrapper">
+        <div class="roboLinks">
+            <div class="photo"><img src="assets/robo.webp" alt="" ></div>
+            <div id="wrap1"class="one column">
+                <div class= "naviW"> Home</div>
+                <div class= "naviW"> Journey</div>
+                <div class= "naviW"> Technology</div>
+                <div class= "naviW"> Team</div>
+            </div>
+            <div id="wrap2"class="two column">
+                <div class= "naviW">Vision</div>
+                <div class= "naviW">Thinking</div>
+                <div class= "naviW">Join Us</div>
+            </div>
+        </div>
+        <div class="wrapFoot">
+            <div id="wrap3"class="three">
+                <div class= "naviH">Connect</div>
+                <div class= "naviH">Google</div>
+                <div class= "naviH">Alphabet</div>
+                <div class= "naviH">Privacy & Terms</div>
+            </div>
+            <div id = "wIcon" class="icon"><i class = "fa fa-linkedin-square" style="font-size:22px;"></i></div>
+        </div>
+    </div>
     <div id="intro" class="container">
-        <div class="heading2"><span> Helper robots <br> for a better <br> <span class = "underlined"> everyday</span> </span></div>
-        <div class="content" id="birth"><span>Born from X, <span intro = "moon"><u>the moonshot factory</u></span>, and working alongside teams at Google, we’re building a new type of robot. One that can learn by itself, to help anyone with (almost) anything.</span></div>
+        <div class="heading2 reveal" ><span class="aniText"> Helper robots <br> for a better <br> <span class = "underlined"> everyday</span> </span></div>
+        <div class="content" id="birth"><span>Born from X, <span class = "moon"><a href="https://x.company">the moonshot factory</a></span>, and working alongside teams at Google, we’re building a new type of robot. One that can learn by itself, to help anyone with (almost) anything.</span></div>
     </div>
     <div class="video">
         <video id = "varHt" autoplay loop muted src="assets/1-0_home-hero-333a001fb517d6ab4f97994cda76c079.mp4"></video>
     </div>
-    <div class="anotherHeadingLMAO">
+    <div class="anotherHeadingLMAO reveal">
       <span>  Our big <br> 
         challenge is <br> 
         small problems</span>
@@ -37,13 +65,13 @@
         Imagine a world where time-consuming, everyday tasks are simply taken care of. A world where we can choose to spend our time on the things that really matter. Where our work lives are more productive, and our personal lives are richer for it.
        </div>
     </div>
-    <div class="smallerHead">
+    <div class="smallerHead reveal">
        <span>
         <span class="underlined"> Solving small</span> will power a <br> quality of progress that was <br> previously unthinkable
        </span>
     </div>
     <div id="chartArea">
-        <div class="desc">
+        <div class="desc reveal">
             In 2017, industrial robots <br> contributed to 10% of GDP growth <br>
              in OECD countries. 
              <!-- As everyday people access the capabilities of robots, productivity improvements could increase 40% by 2035. -->
@@ -54,7 +82,7 @@
 1.Centre for Economics and Business <br> &nbsp;&nbsp; Research, 2017 <br>
 2.Accenture, 2016
     </div>
-    <div class="anotherHeadingLMAO" id="promise">
+    <div class="anotherHeadingLMAO reveal" id="promise">
         <span>  That's the <br> 
           promise of <br> 
           helper robots</span>
@@ -81,7 +109,7 @@
             </p>
         </div>
     </div>
-    <div id="story">
+    <div id="story" class = "reveal">
         Watch our story:
     </div>
     <div class="caroCont">
@@ -89,7 +117,7 @@
             <picture> <img src="assets/caro1.webp" alt=""></picture>
         </div>
     </div>
-    <div class="anotherHeadingLMAO">
+    <div class="anotherHeadingLMAO reveal">
         <span>A moonshot for <br> robotics</span>
     </div>
     <div id="contentOof" class="centerj">
@@ -120,18 +148,18 @@ We’re starting in the places where we spend most of our waking hours — the p
             <div class="icon"><i class = "fa fa-linkedin-square" style="font-size:22px;"></i></div>
             </div>
             <div  class="right2">
-                <div id="navi1"class="one column">
+                <div id="navi1">
                     <div class= "navi"> Home</div>
                     <div class= "navi"> Journey</div>
                     <div class= "navi"> Technology</div>
                     <div class= "navi"> Team</div>
                 </div>
-                <div id="navi2"class="two column">
+                <div class="column">
                     <div class= "navi">Vision</div>
                     <div class= "navi">Thinking</div>
                     <div class= "navi">Join Us</div>
                 </div>
-                <div id="navi3"class="three column">
+                <div class="three">
                     <div class= "navi">Connect</div>
                     <div class= "navi">Privacy & Terms</div>
                     <div class= "navi">Google</div>
@@ -143,7 +171,7 @@ We’re starting in the places where we spend most of our waking hours — the p
             Copyright 2021 X Development LLC. All rights reserved.
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 <!-- <div class="cursor rounded">
     <i class = "fa fa-arrow-right"></i>
