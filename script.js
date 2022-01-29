@@ -12,9 +12,9 @@
 //parallax
 window.addEventListener('scroll', function (e) {
     const paral = document.querySelector('.imgHolder');
-    var scrolled = window.pageYOffset - 3200;
+    var scrolled = window.pageYOffset - 3000;
     var rate = -(scrolled * 0.25);
-    console.log(window.pageYOffset);
+    // console.log(window.pageYOffset);
 
     paral.style.transform = 'translate3d(0px,' + rate + 'px,0px)';
 });
@@ -45,12 +45,40 @@ function toggle(){
         nav.style.color = "white";
     }
     else{
-        navMenu.style.clipPath = "circle(10px at calc(100% - 11vh) 11vh)";
+        navMenu.style.clipPath = "circle(10px at calc(100% - 11vh) 10vh)";
         isOpen=false;
         nav.style.color = "black";
     }
 
 }
+let namee = document.querySelector('#tag');
+window.addEventListener('scroll',()=>{
+    if(window.pageYOffset!=0){
+        namee.style.opacity = "0";
+    }
+    else{
+        namee.style.opacity = "1";
+    }
+});
+let vid = document.getElementById('varHt');
+window.addEventListener('scroll',height);
+function height(){
+    // vid.style.width = '100%';        
+        var scroll = window.pageYOffset;
+        var number = scroll*0.3 +'%';
+        if(number < '90%'){
+            number = '90%';
+            // vid.style.width = '90%';
+        }
+        else if(number > '100%'){
+            number = '100%';
+            // vid.style.width = number;
+        }
+        else{
+            // vid.style.width = number;
+        }
+        vid.style.width = number;
+     }
 // function change(){
 //     text.innerHTML("Menu");
 // }

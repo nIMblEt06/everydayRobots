@@ -19,6 +19,9 @@
 body{
     background-color: #ede8e6;
 }
+*::-webkit-scrollbar {
+    display: none;
+  }
 .heading span{
     font-family: 'CalibreB', sans-serif;
     font-size: 3vw;
@@ -35,7 +38,7 @@ body{
 .nav{
     display: flex;
     justify-content: space-between;
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-inline: 8vh;
 }
 .fixed-top{
@@ -109,7 +112,13 @@ body{
     color: #262626;
 }
 .video{
+    display: flex;
     margin-top: 80px;
+    justify-content: center;
+}
+#varHt{
+    width: 90%;
+    overflow: hidden;
 }
 #menuNav{
     content: '';
@@ -122,9 +131,6 @@ body{
     transition: all .3s ease;
     cursor: pointer;
     z-index: 2;
-}
-.video video{
-    width: 100%;
 }
 .anotherHeadingLMAO span{
     font-family: CalibreB, sans-serif;
@@ -363,8 +369,8 @@ body{
     background-color: #11100e;
     color: white;
     z-index: 1;
-    transition: all 1s;
-    clip-path: circle(10px at calc(100% - 11vh) 11vh);
+    transition: all 0.7s;
+    clip-path: circle(10px at calc(100% - 11vh) 10vh);
     overflow: hidden;
 }
 .roboLinks{
@@ -428,4 +434,7 @@ body{
     margin-top: -5vh;
     position: fixed;
     right:60px;
+}
+#name{
+    transition: all 1s ease;
 }
