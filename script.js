@@ -43,6 +43,7 @@ function toggle(){
         navMenu.style.clipPath = "circle(75%)";
         isOpen = true;
         nav.style.color = "white";
+        navMenu.style.visibility = "visible";
     }
     else{
         navMenu.style.clipPath = "circle(10px at calc(100% - 11vh) 10vh)";
@@ -54,31 +55,45 @@ function toggle(){
 let namee = document.querySelector('#tag');
 window.addEventListener('scroll',()=>{
     if(window.pageYOffset!=0){
-        namee.style.opacity = "0";
+        namee.style.visibility = "hidden";
     }
     else{
-        namee.style.opacity = "1";
+        namee.style.visibility = "visible";
     }
 });
 let vid = document.getElementById('varHt');
 window.addEventListener('scroll',height);
 function height(){
     // vid.style.width = '100%';        
-        var scroll = window.pageYOffset;
-        var number = scroll*0.3 +'%';
-        if(number < '90%'){
-            number = '90%';
-            // vid.style.width = '90%';
+        var scroll = window.pageYOffset + 1000;
+        var number = scroll*0.08;
+        if(number < 90){
+            number = 90;
+            vid.style.width = number + '%';
         }
-        else if(number > '100%'){
-            number = '100%';
-            // vid.style.width = number;
+        else if(number > 90 && number < 100){
+            vid.style.width =  number + '%';
         }
         else{
-            // vid.style.width = number;
+            vid.style.width = '100%';
         }
-        vid.style.width = number;
      }
+
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+})
+const cursor2 = document.querySelector('.cursor2');
+document.addEventListener('mousemove', (e) => {
+    cursor2.style.left = e.pageX + 'px';
+    cursor2.style.top = e.pageY + 'px';
+})
+const cursor3 = document.querySelector('.cursor3');
+document.addEventListener('mousemove', (e) => {
+    cursor3.style.left = e.pageX + 'px';
+    cursor3.style.top = e.pageY + 'px';
+})
 // function change(){
 //     text.innerHTML("Menu");
 // }

@@ -78,6 +78,12 @@ body{
     }
         
 }
+#Menu{
+    transition: 0.3s ease;
+}
+#tag{
+    transition: 0.7s ease;
+}
 .moon a{
     text-decoration: none;
     color: black;
@@ -233,7 +239,7 @@ body{
     margin-top: 25px;
     margin-left: 10vw;
 }
-.carousel picture img{
+.slide img{
     width: 80%;
 }
 #contentOof{
@@ -372,6 +378,7 @@ body{
     transition: all 0.7s;
     clip-path: circle(10px at calc(100% - 11vh) 10vh);
     overflow: hidden;
+    visibility: hidden;
 }
 .roboLinks{
     overflow: hidden;
@@ -391,9 +398,6 @@ body{
     font-size: 5rem;
     cursor: pointer;
     transition: all 0.2s ease;
-}
-.naviW:hover{
-    color: #ffad00;
 }
 .photo{
     display: flex;
@@ -435,6 +439,58 @@ body{
     position: fixed;
     right:60px;
 }
-#name{
-    transition: all 1s ease;
+.cursor{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffad00;
+    transition: 0.05s ease;
+    visibility: hidden;
+}
+#main:hover ~ .cursor{
+    visibility: visible;
+    transform: scale(2);
+    
+}
+.cursor i{
+    color: black;
+    transform: translate(15px,5px);
+    font-size: 8px;
+}
+.cursor2{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffad00;
+    transition: 0.05s ease;
+    visibility: hidden;
+}
+.cursor2 i{
+    color: black;
+    transform: translate(15px,5px);
+    font-size: 8px;
+}
+.naviW:hover ~ .cursor2{
+    visibility: visible;
+    transform: scale(2);
+}
+.cursor3{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffad00;
+    transition: 0.05s ease;
+    visibility: hidden;
+}
+.cursor3 i{
+    color: black;
+    transform: translate(15px,5px);
+    font-size: 8px;
+}
+.naviW:hover ~ .cursor3{
+    visibility: visible;
+    transform: scale(2);
 }
