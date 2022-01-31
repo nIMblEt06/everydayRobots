@@ -12,8 +12,8 @@
 //parallax
 window.addEventListener('scroll', function (e) {
     const paral = document.querySelector('.imgHolder');
-    var scrolled = window.pageYOffset - 3000;
-    var rate = -(scrolled * 0.25);
+    var scrolled = window.pageYOffset - 3500;
+    var rate = -(scrolled * 0.30);
     // console.log(window.pageYOffset);
 
     paral.style.transform = 'translate3d(0px,' + rate + 'px,0px)';
@@ -33,26 +33,39 @@ function reveal() {
         }
     }
 }
-const Menu = document.querySelector('.Menu');
+
+const Menu = document.querySelector('#Menu');
 let text = document.querySelector('navig');
 const navMenu = document.querySelector('.wrapper');
 const nav = document.querySelector('.nav');
+let namee = document.querySelector('#tag');
+var navig = document.getElementById('navig');
 var isOpen = false;
+function change(){
+    navig.innerHTML = "Menu";
+}
+function revert(){
+    navig.innerHTML = "Home";
+}
 function toggle(){
     if(!isOpen){
         navMenu.style.clipPath = "circle(75%)";
         isOpen = true;
         nav.style.color = "white";
         navMenu.style.visibility = "visible";
+        namee.style.visibility = "visible";
+        navig.innerHTML = "Close";
     }
     else{
         navMenu.style.clipPath = "circle(10px at calc(100% - 11vh) 10vh)";
         isOpen=false;
         nav.style.color = "black";
+        namee.style.visibility = "hidden";
+        
     }
 
 }
-let namee = document.querySelector('#tag');
+
 window.addEventListener('scroll',()=>{
     if(window.pageYOffset!=0){
         namee.style.visibility = "hidden";
@@ -94,6 +107,22 @@ document.addEventListener('mousemove', (e) => {
     cursor3.style.left = e.pageX + 'px';
     cursor3.style.top = e.pageY + 'px';
 })
-// function change(){
-//     text.innerHTML("Menu");
-// }
+
+
+var scrollIndex = 0;
+document.addEventListener('scroll', (e) =>{
+    if(scrollIndex < e.pageYOffset){
+        scrollIndex = e.pageYOffset;
+        Menu.style.display = "none";
+    }
+    else{
+        Menu.style.visibility = "visible";
+        scrollIndex = e.pageYOffset;
+    }
+    console.log(scrollIndex);
+})
+const head2 = document.querySelector('.heading2');
+function disp(){
+    head2.classList.add("active");
+}
+setTimeout(disp, 500);
