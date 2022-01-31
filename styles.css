@@ -238,9 +238,41 @@ body{
 .caroCont{
     margin-top: 25px;
     margin-left: 10vw;
+    display: flex;
 }
-.slide img{
+.slide{
     width: 80%;
+}
+/* .slide img{
+    width: 100%;
+} */
+#im1{
+    position: absolute;
+    left: 11vw;
+    width: 1500px;
+}
+#im2{
+    position: absolute;
+    left: 90vw;
+    width: 1500px;
+}
+#im3{
+    position: absolute;
+    left: 120vw;
+    width: 1500px;
+}
+#im4{
+    position: absolute;
+    left: 180vw;
+    width: 1500px;
+}
+#im5{
+    position: absolute;
+    left: 200vw;
+    width: 1500px;
+}
+#roboMoon{
+    margin-top: 70em;
 }
 #contentOof{
     display: flex;
