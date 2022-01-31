@@ -197,7 +197,11 @@ body{
 .desc::after{
     content: "";
     position: absolute;
+<<<<<<< HEAD
     background: url(assets/chart.svg)  no-repeat;
+=======
+    background: url(Assets/chart.svg) no-repeat;
+>>>>>>> 687fb316a35d0d6eea2f868fd41ac7e7e7a062be
     transform: translate(20vw,-45vh);
     width: 43vw;
     height: 70vh;
@@ -243,6 +247,7 @@ body{
     margin-top: 25px;
     margin-left: 10vw;
     display: flex;
+<<<<<<< HEAD
 }
 
 #im1{
@@ -270,6 +275,43 @@ body{
     position: absolute;
     left: 200vw;
     width: 90em;
+}
+#roboMoon{
+    margin-top: 70em;
+=======
+    overflow: hidden;
+}
+.slide{
+    width: 80%;
+>>>>>>> 687fb316a35d0d6eea2f868fd41ac7e7e7a062be
+}
+/* .slide img{
+    width: 100%;
+} */
+#im1{
+    position: absolute;
+    left: 11vw;
+    width: 1500px;
+}
+#im2{
+    position: absolute;
+    left: 90vw;
+    width: 1500px;
+}
+#im3{
+    position: absolute;
+    left: 120vw;
+    width: 1500px;
+}
+#im4{
+    position: absolute;
+    left: 180vw;
+    width: 1500px;
+}
+#im5{
+    position: absolute;
+    left: 200vw;
+    width: 1500px;
 }
 #roboMoon{
     margin-top: 70em;
