@@ -18,6 +18,7 @@
 }
 body{
     background-color: #ede8e6;
+    overflow-x: hidden;
 }
 *::-webkit-scrollbar {
     display: none;
@@ -40,6 +41,9 @@ body{
     justify-content: space-between;
     margin-top: 8vh;
     margin-inline: 8vh;
+}
+.nav.animate{
+    visibility: hidden;
 }
 .fixed-top{
     position: fixed;
@@ -82,7 +86,7 @@ body{
     transition: 0.3s ease;
 }
 #tag{
-    transition: 0.7s ease;
+    transition: color 0.7s ease;
 }
 .moon a{
     text-decoration: none;
@@ -193,7 +197,7 @@ body{
 .desc::after{
     content: "";
     position: absolute;
-    background-image: url(assets/chart.svg);
+    background: url(assets/chart.svg)  no-repeat;
     transform: translate(20vw,-45vh);
     width: 43vw;
     height: 70vh;
@@ -230,7 +234,7 @@ body{
     font-size: 19px;
 }
 #story{
-    margin-top: 125px;
+    margin-top: 20px;
     font-family: CalibreB;
     font-size: 5vw;
     margin-left: 10vw;
@@ -238,9 +242,37 @@ body{
 .caroCont{
     margin-top: 25px;
     margin-left: 10vw;
+    display: flex;
 }
-.slide img{
-    width: 80%;
+
+#im1{
+    position: absolute;
+    left: 13em;
+    width: 90em;
+    margin-right: 200px;
+}
+#im2{
+    position: absolute;
+    left: 100em;
+    width: 90em;
+}
+#im3{
+    position: absolute;
+    left: 120vw;
+    width: 90em;
+}
+#im4{
+    position: absolute;
+    left: 180vw;
+    width: 90em;
+}
+#im5{
+    position: absolute;
+    left: 200vw;
+    width: 90em;
+}
+#roboMoon{
+    margin-top: 70em;
 }
 #contentOof{
     display: flex;
@@ -265,7 +297,7 @@ body{
 #footContainer{
     background-color: #11100e;
     color: white;
-    padding-top: 8vh;
+    padding-top: 12vh;
     padding-inline: 4vw;
     z-index: -2;
 }
@@ -273,6 +305,7 @@ body{
     font-family: CalibreB;
     font-size: 2.6vw;
 }
+
 .journey{
     margin-top: 25px;
     justify-content: space-between;
@@ -328,6 +361,9 @@ body{
 .icon i{
     transform: translate(20px, 20px);
 }
+#navig{
+    transition: all 0.3s;
+}
 .footer{
     margin-top: 1rem;
     font-family: CalibreR;
@@ -352,6 +388,16 @@ body{
     transform: translateY(80px);
     opacity: 0;
     transition: all 0.6s ease;
+}
+.heading2{
+    position: relative;
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.heading2.active{
+    transform: translateY(0px);
+    opacity: 1;
 }
 .reveal.active{
     transform: translateY(0px);
@@ -459,7 +505,7 @@ body{
     font-size: 8px;
 }
 .cursor2{
-    position: absolute;
+    position: fixed;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -477,7 +523,7 @@ body{
     transform: scale(2);
 }
 .cursor3{
-    position: absolute;
+    position: fixed;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -494,3 +540,4 @@ body{
     visibility: visible;
     transform: scale(2);
 }
+

@@ -15,7 +15,7 @@
 <body>
     <nav class=" nav fixed-top">
         <div id ="name" class= "heading"><span id = "tag">Everyday <br> Robots</span> </div>
-        <div id="Menu" onmouseover="change()">
+        <div id="Menu" onmouseenter="change()" onmouseleave="revert()">
             <span id ="navig"> Home</span>
             <span id ="menuNav" onclick="toggle()"></span>
         </div>
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div id="intro" class="container">
-        <div class="heading2 reveal" ><span class="aniText"> Helper robots <br> for a better <br> <span class = "underlined"> everyday</span> </span></div>
+        <div class="heading2" ><span class="aniText"> Helper robots <br> for a better <br> <span class = "underlined"> everyday</span> </span></div>
         <div class="content" id="birth"><span>Born from X, <span class = "moon"><a href="https://x.company">the moonshot factory</a></span>, and working alongside teams at Google, we’re building a new type of robot. One that can learn by itself, to help anyone with (almost) anything.</span></div>
     </div>
     <div class="video">
@@ -118,22 +118,22 @@
     </div>
     <div class="caroCont">
         <div class="slide fade">
-             <img src="Assets/caro1.webp" alt="">
+             <img class = "picHere" id = "im1" src="Assets/caro1.webp" alt="">
         </div>
         <div class="slide fade">
-             <img src="Assets/caro2.webp" alt="">
+             <img class = "picHere" id = "im2" src="Assets/caro2.webp" alt="">
         </div>
         <div class="slide fade">
-             <img src="Assets/caro3.webp" alt="">
+             <img class = "picHere" id = "im3" src="Assets/caro3.webp" alt="">
         </div>
         <div class="slide fade">
-             <img src="Assets/caro4.webp" alt="">
+             <img class = "picHere" id = "im4" src="Assets/caro4.webp" alt="">
         </div>
         <div class="slide fade">
-             <img src="Assets/caro5.webp" alt="">
+             <img class = "picHere" id = "im5" src="Assets/caro5.webp" alt="">
         </div>
     </div>
-    <div class="anotherHeadingLMAO reveal">
+    <div id ="roboMoon" class="anotherHeadingLMAO reveal">
         <span>A moonshot for <br> robotics</span>
     </div>
     <div id="contentOof" class="centerj">
