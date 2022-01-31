@@ -197,11 +197,8 @@ body{
 .desc::after{
     content: "";
     position: absolute;
-<<<<<<< HEAD
     background: url(assets/chart.svg)  no-repeat;
-=======
     background: url(Assets/chart.svg) no-repeat;
->>>>>>> 687fb316a35d0d6eea2f868fd41ac7e7e7a062be
     transform: translate(20vw,-45vh);
     width: 43vw;
     height: 70vh;
@@ -247,7 +244,6 @@ body{
     margin-top: 25px;
     margin-left: 10vw;
     display: flex;
-<<<<<<< HEAD
 }
 
 #im1{
@@ -278,12 +274,10 @@ body{
 }
 #roboMoon{
     margin-top: 70em;
-=======
     overflow: hidden;
 }
 .slide{
     width: 80%;
->>>>>>> 687fb316a35d0d6eea2f868fd41ac7e7e7a062be
 }
 /* .slide img{
     width: 100%;
