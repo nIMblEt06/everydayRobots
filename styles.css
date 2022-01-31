@@ -18,6 +18,7 @@
 }
 body{
     background-color: #ede8e6;
+    overflow-x: hidden;
 }
 *::-webkit-scrollbar {
     display: none;
