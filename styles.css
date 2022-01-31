@@ -82,7 +82,7 @@ body{
     transition: 0.3s ease;
 }
 #tag{
-    transition: 0.7s ease;
+    transition: color 0.7s ease;
 }
 .moon a{
     text-decoration: none;
@@ -193,7 +193,7 @@ body{
 .desc::after{
     content: "";
     position: absolute;
-    background-image: url(assets/chart.svg);
+    background-image: url(Assets/chart.svg) no-repeat;
     transform: translate(20vw,-45vh);
     width: 43vw;
     height: 70vh;
