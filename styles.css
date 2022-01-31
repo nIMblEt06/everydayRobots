@@ -239,6 +239,7 @@ body{
     margin-top: 25px;
     margin-left: 10vw;
     display: flex;
+    overflow: hidden;
 }
 .slide{
     width: 80%;
