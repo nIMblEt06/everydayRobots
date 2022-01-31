@@ -60,7 +60,9 @@ function toggle(){
         navMenu.style.clipPath = "circle(10px at calc(100% - 11vh) 10vh)";
         isOpen=false;
         nav.style.color = "black";
-        namee.style.visibility = "hidden";
+        if(window.pageYOffset!=0){
+            namee.style.visibility = "hidden";
+        }
         
     }
 
