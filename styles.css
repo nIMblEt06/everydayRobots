@@ -193,7 +193,7 @@ body{
 .desc::after{
     content: "";
     position: absolute;
-    background-image: url(Assets/chart.svg) no-repeat;
+    background: url(Assets/chart.svg) no-repeat;
     transform: translate(20vw,-45vh);
     width: 43vw;
     height: 70vh;
