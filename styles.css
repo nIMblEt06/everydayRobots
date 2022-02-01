@@ -280,8 +280,13 @@ body{
     width: 100%;
 } */
 #roboMoon{
+<<<<<<< HEAD
     margin-top: 5em;
     z-index: 5; 
+=======
+    margin-top: 60em;
+    margin-bottom: 6em;
+>>>>>>> e2280293acb1741669854676bb7e631cd952dbcc
 }
 #contentOof{
     display: flex;
@@ -301,7 +306,7 @@ body{
 }
 .left video{
     margin-top: 10vh;
-    margin-left: -25vw;
+    margin-left: -12vw;
     width: 100%;
 }
 #footContainer{
