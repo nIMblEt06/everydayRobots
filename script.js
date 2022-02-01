@@ -16,7 +16,7 @@ const caroImages = document.querySelectorAll('.carousel-slide img');
 
 const nextNav = document.querySelectorAll('.inactive');
 let counter = 0;
-const size = caroImages[0].clientWidth + 150;
+const size = 1395;
 caroImages[counter].style.cursor = "default";
 //parallax
 prevBtn.style.visibility = "hidden";
