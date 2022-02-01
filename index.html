@@ -116,23 +116,25 @@
     <div id="story" class = "reveal">
         Watch our story:
     </div>
-    <div class="caroCont">
-        <div class="slide fade">
-             <img class = "picHere" id = "im1" src="Assets/caro1.webp" alt="">
-        </div>
-        <div class="slide fade">
-             <img class = "picHere" id = "im2" src="Assets/caro2.webp" alt="">
-        </div>
-        <div class="slide fade">
-             <img class = "picHere" id = "im3" src="Assets/caro3.webp" alt="">
-        </div>
-        <div class="slide fade">
-             <img class = "picHere" id = "im4" src="Assets/caro4.webp" alt="">
-        </div>
-        <div class="slide fade">
-             <img class = "picHere" id = "im5" src="Assets/caro5.webp" alt="">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img class = "caroNavi" onclick = "nextSlide()" src="Assets/caro1.webp" alt="">
+            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro2.webp" alt="">
+            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro3.webp" alt="">
+            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro4.webp" alt="">
+            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro5.webp" alt="">
+            <!-- <div class="cursor4"> <i class = "fa fa-arrow-right"></i></div> -->
         </div>
     </div>
+    <button id="prevBtn">Prev</button>
+    <button id="nextBtn">Next</button>
+    <!-- <div class="map">
+        <span class="first active"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+        <span class="fourth"></span>
+        <span class="fifth"></span>
+    </div> -->
 
     <div id = "roboMoon" class="anotherHeadingLMAO reveal">
         <span>A moonshot for <br> robotics</span>

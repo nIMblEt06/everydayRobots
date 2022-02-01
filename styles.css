@@ -245,36 +245,33 @@ body{
     margin-left: 10vw;
     display: flex;
 }
-
+/* .picHere{
+    transform: translateX(-80em)
+} */
 #im1{
     position: absolute;
     left: 13em;
-    width: 90em;
-    margin-right: 200px;
+    width: 80em;
 }
 #im2{
     position: absolute;
     left: 100em;
-    width: 90em;
+    width: 80em;
 }
 #im3{
     position: absolute;
-    left: 120vw;
-    width: 90em;
+    left: 187em;
+    width: 80em;
 }
 #im4{
     position: absolute;
-    left: 180vw;
-    width: 90em;
+    left: 274em;
+    width: 80em;
 }
 #im5{
     position: absolute;
-    left: 200vw;
-    width: 90em;
-}
-#roboMoon{
-    margin-top: 70em;
-    overflow: hidden;
+    left: 361em;
+    width: 80em;
 }
 .slide{
     width: 80%;
@@ -282,33 +279,9 @@ body{
 /* .slide img{
     width: 100%;
 } */
-#im1{
-    position: absolute;
-    left: 11vw;
-    width: 1500px;
-}
-#im2{
-    position: absolute;
-    left: 90vw;
-    width: 1500px;
-}
-#im3{
-    position: absolute;
-    left: 120vw;
-    width: 1500px;
-}
-#im4{
-    position: absolute;
-    left: 180vw;
-    width: 1500px;
-}
-#im5{
-    position: absolute;
-    left: 200vw;
-    width: 1500px;
-}
 #roboMoon{
-    margin-top: 70em;
+    margin-top: 5em;
+    z-index: 5; 
 }
 #contentOof{
     display: flex;
@@ -318,6 +291,7 @@ body{
     font-size: 19px;
     color: #262626;
     padding-bottom: 14vh;
+    z-index: 5;
 }
 .right{
     padding-left:5vw;
@@ -537,8 +511,8 @@ body{
 }
 .cursor i{
     color: black;
-    transform: translate(15px,5px);
-    font-size: 8px;
+    transform: translate(16px,7px);
+    font-size:9px;
 }
 .cursor2{
     position: fixed;
@@ -551,8 +525,8 @@ body{
 }
 .cursor2 i{
     color: black;
-    transform: translate(15px,5px);
-    font-size: 8px;
+    transform: translate(16px,7px);
+    font-size:9px;
 }
 .naviW:hover ~ .cursor2{
     visibility: visible;
@@ -569,11 +543,66 @@ body{
 }
 .cursor3 i{
     color: black;
-    transform: translate(15px,5px);
-    font-size: 8px;
+    transform: translate(16px,7px);
+    font-size:9px;
 }
 .naviW:hover ~ .cursor3{
     visibility: visible;
     transform: scale(2);
 }
+.cursor4{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffad00;
+    transition: 0.05s ease;
+    visibility: hidden;
+}
+.cursor4 i{
+    color: black;
+    transform: translate(16px,7px);
+    font-size:9px;
+}
+.inactive:hover ~ .cursor4{
+    visibility: visible;
+    transform: scale(2);
+}
+.slide{
+    cursor: pointer;
+}
+.slide.active{
+    cursor:default;
+}
+.map {
+    background-color: #11100e;
+    position: absolute;
+    margin-top: 50em;
+    margin-left: 16em;
+}
+.map span{
+    content: '';
+    /* position: absolute; */
+    height: 2px;
+    width: 2px;
+    background-color: #666666;
+}
 
+.carousel-container{
+    width: 80%;
+    margin: 7rem auto;
+    padding-left: 4rem;
+    /* border: 5px solid black; */
+    /* overflow: hidden; */
+}
+.carousel-slide{
+    display: flex;
+    width: 100%;
+    /* height: 700px; */
+}
+.carousel-slide img{
+    width: 100%;
+    height: 700px;
+    margin-inline: 4rem;
+    cursor: pointer;
+}
