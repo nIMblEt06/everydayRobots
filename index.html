@@ -54,7 +54,7 @@
         <div class="content" id="birth"><span>Born from X, <span class = "moon"><a href="https://x.company">the moonshot factory</a></span>, and working alongside teams at Google, we’re building a new type of robot. One that can learn by itself, to help anyone with (almost) anything.</span></div>
     </div>
     <div class="video">
-        <video id = "varHt" autoplay loop muted src="Assets/1-0_home-hero-333a001fb517d6ab4f97994cda76c079.mp4"></video>
+        <video autoplay loop muted id = "varHt" src="Assets/1-0_home-hero-333a001fb517d6ab4f97994cda76c079.mp4"></video>
     </div>
     <div class="anotherHeadingLMAO reveal">
       <span>  Our big <br> 
@@ -118,24 +118,24 @@
     </div>
     <div class="carousel-container">
         <div class="carousel-slide">
-            <img class = "caroNavi" onclick = "nextSlide()" src="Assets/caro1.webp" alt="">
-            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro2.webp" alt="">
-            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro3.webp" alt="">
-            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro4.webp" alt="">
-            <img class = "caroNavi onRight" onclick="changeSlide()" src="Assets/caro5.webp" alt="">
+            <img class = "caroNavi" src="Assets/caro1.webp" alt="">
+            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro2.webp" alt="">
+            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro3.webp" alt="">
+            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro4.webp" alt="">
+            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro5.webp" alt="">
             <!-- <div class="cursor4"> <i class = "fa fa-arrow-right"></i></div> -->
         </div>
+        <div class="map">
+            <span id ="firstS" class="active" onclick = "displaySlide(1)"></span>
+            <span id ="secondS" onclick = "displaySlide(2)"></span>
+            <span id ="thirdS" onclick = "displaySlide(3)"></span>
+            <span id ="fourthS" onclick = "displaySlide(4)"></span>
+            <span id ="fifthS" onclick = "displaySlide(5)"></span>
+        </div>
     </div>
-    <button id="prevBtn">Prev</button>
-    <button id="nextBtn">Next</button>
-    <!-- <div class="map">
-        <span class="first active"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-        <span class="fourth"></span>
-        <span class="fifth"></span>
-    </div> -->
-
+    <button id="prevBtn"><button>
+    <button id="nextBtn"></button>
+    
     <div id = "roboMoon" class="anotherHeadingLMAO reveal">
         <span>A moonshot for <br> robotics</span>
     </div>

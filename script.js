@@ -11,8 +11,8 @@
 const carouselSlide = document.querySelector('.carousel-slide');
 const caroImages = document.querySelectorAll('.carousel-slide img');
 
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
+// const prevBtn = document.querySelector('#prevBtn');
+// const nextBtn = document.querySelector('#nextBtn');
 
 const nextNav = document.querySelectorAll('.inactive');
 let counter = 0;
@@ -39,36 +39,42 @@ function prevSlide(){
     counter--;
     caroImages[counter].style.cursor = "default";
     caroImages[counter+1].style.cursor = "pointer";
-    carouselSlide.style.transform = 'translateX('+(-size * counter) + 'px)';
+    carouselSlide.style.transform = 'translateX('+(- size * counter) + 'px)';
     nextBtn.style.visibility = "visible";
     if(counter < 1){
         prevBtn.style.visibility = "hidden";
     }
 }
-function changeSlide(){
+function displaySlide(n){
     carouselSlide.style.transition = "transform 0.9s ease-out";
-    if(this.classList.contains("onRight")){
-        carouselSlide.style.transition = "transform 0.9s ease-out";
-    counter++;
-    caroImages[counter].style.cursor = "default";
-    caroImages[counter-1].style.cursor = "pointer";
-    carouselSlide.style.transform = 'translateX('+(-size * counter) + 'px)';
-    prevBtn.style.visibility = "visible";
-    if(counter == 4){
-        nextBtn.style.visibility = "hidden";
-    }
-    }
-    else{
-        counter--;
-        caroImages[counter].style.cursor = "default";
-        caroImages[counter+1].style.cursor = "pointer";
-        carouselSlide.style.transform = 'translateX('+(-size * counter) + 'px)';
-        nextBtn.style.visibility = "visible";
-        if(counter < 1){
-            prevBtn.style.visibility = "hidden";
-        }
-    }
-    }
+    carouselSlide.style.transform = 'translateX('+(- size * (n-1)) + 'px)';
+    this.classList.add("active");
+}
+// function changeSlide(){
+//     console.log(this.classList);
+//     carouselSlide.style.transition = "transform 0.9s ease-out";
+//     if(this.classList.contains("onRight")){
+//         carouselSlide.style.transition = "transform 0.9s ease-out";
+//     counter++;
+//     caroImages[counter].style.cursor = "default";
+//     caroImages[counter-1].style.cursor = "pointer";
+//     carouselSlide.style.transform = 'translateX('+(-size * counter) + 'px)';
+//     prevBtn.style.visibility = "visible";
+//         if(counter == 4){
+//             nextBtn.style.visibility = "hidden";
+//     }
+//     }
+//     else{
+//         counter--;
+//         caroImages[counter].style.cursor = "default";
+//         caroImages[counter+1].style.cursor = "pointer";
+//         carouselSlide.style.transform = 'translateX('+(-size * counter) + 'px)';
+//         nextBtn.style.visibility = "visible";
+//         if(counter < 1){
+//             prevBtn.style.visibility = "hidden";
+//         }
+//     }
+//     }
     
 const cursor4 = document.querySelector('.cursor4');
 document.addEventListener('mousemove', (e) => {
@@ -109,6 +115,7 @@ const navMenu = document.querySelector('.wrapper');
 const nav = document.querySelector('.nav');
 let namee = document.querySelector('#tag');
 var navig = document.getElementById('navig');
+
 var isOpen = false;
 function change(){
     navig.innerHTML = "Menu";
@@ -128,6 +135,7 @@ function toggle(){
     else{
         navMenu.style.clipPath = "circle(10px at calc(100% - 11vh) 10vh)";
         isOpen=false;
+    
         nav.style.color = "black";
         if(window.pageYOffset!=0){
             namee.style.visibility = "hidden";
@@ -171,12 +179,12 @@ document.addEventListener('mousemove', (e) => {
 const cursor2 = document.querySelector('.cursor2');
 document.addEventListener('mousemove', (e) => {
     cursor2.style.left =  e.pageX + 'px';
-    cursor2.style.top =  e.pageY + 'px';
+    cursor2.style.top =  e.pageY + (-window.scrollY) +'px';
 })
 const cursor3 = document.querySelector('.cursor3');
 document.addEventListener('mousemove', (e) => {
-    cursor3.style.left = e.pageX + 'px';
-    cursor3.style.top = e.pageY + 'px';
+    cursor3.style.left = e.pageX +  'px';
+    cursor3.style.top = e.pageY + (-window.scrollY) + 'px';
 })
 // const cursor4 = document.querySelector('.cursor4');
 // document.addEventListener('mousemove', (e) => {

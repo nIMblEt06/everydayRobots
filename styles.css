@@ -280,13 +280,8 @@ body{
     width: 100%;
 } */
 #roboMoon{
-<<<<<<< HEAD
     margin-top: 5em;
     z-index: 5; 
-=======
-    margin-top: 60em;
-    margin-bottom: 6em;
->>>>>>> e2280293acb1741669854676bb7e631cd952dbcc
 }
 #contentOof{
     display: flex;
@@ -582,15 +577,8 @@ body{
 .map {
     background-color: #11100e;
     position: absolute;
-    margin-top: 50em;
+    margin-top: 5em;
     margin-left: 16em;
-}
-.map span{
-    content: '';
-    /* position: absolute; */
-    height: 2px;
-    width: 2px;
-    background-color: #666666;
 }
 
 .carousel-container{
@@ -610,4 +598,53 @@ body{
     height: 700px;
     margin-inline: 4rem;
     cursor: pointer;
+}
+#firstS{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888887;
+    position: absolute;
+    cursor: pointer;
+}
+#secondS{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888887;
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(20px);
+}
+#thirdS{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888887;
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(40px);
+}
+#fourthS{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888887;
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(60px);
+}
+#fifthS{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888887;
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(80px);
 }
