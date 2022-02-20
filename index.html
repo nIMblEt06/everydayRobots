@@ -118,19 +118,49 @@
     </div>
     <div class="carousel-container">
         <div class="carousel-slide">
-            <img class = "caroNavi" src="Assets/caro1.webp" alt="">
-            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro2.webp" alt="">
-            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro3.webp" alt="">
-            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro4.webp" alt="">
-            <img class = "caroNavi onRight" onclick="nextSlide()" src="Assets/caro5.webp" alt="">
+            <div class="imgCont">
+                <img class="caroNavi" onclick="changeSlide()" src="Assets/caro1.webp" alt="">
+                <div class="info">
+                    <p>Prologue</p>
+                    <h2>Intoducing Everyday Robots</h2>
+                </div>
+            </div>
+            <div class="imgCont">
+                <img class="caroNavi onRight" onclick="changeSlide()" src="Assets/caro2.webp" alt="">
+                <div class="info">
+                    <p>Chapter 1</p>
+                    <h2>The challenge of the everyday</h2>
+                </div>
+            </div>
+            <div class="imgCont">
+                <img class="caroNavi onRight" onclick="changeSlide()" src="Assets/caro3.webp" alt="">
+            <div class="info">
+                <p>Chapter 2</p>
+                <h2>A robot that learns</h2>
+            </div>
+            </div>
+            <div class="imgCont">
+                <img class="caroNavi onRight" onclick="changeSlide()" src="Assets/caro4.webp" alt="">
+            <div class="info">
+                <p>Chapter 3</p>
+                <h2>Training the first task</h2>
+            </div>
+            </div>
+            <div class="imgCont">
+                <img class="caroNavi onRight" onclick="changeSlide()" src="Assets/caro5.webp" alt="">
+            <div class="info">
+                <p>Chapter 4</p>
+                <h2>Building with everyone</h2>
+            </div>
+            </div>
             <!-- <div class="cursor4"> <i class = "fa fa-arrow-right"></i></div> -->
         </div>
         <div class="map">
-            <span id ="firstS" class="active" onclick = "displaySlide(1)"></span>
-            <span id ="secondS" onclick = "displaySlide(2)"></span>
-            <span id ="thirdS" onclick = "displaySlide(3)"></span>
-            <span id ="fourthS" onclick = "displaySlide(4)"></span>
-            <span id ="fifthS" onclick = "displaySlide(5)"></span>
+            <span id="firstS" class="activeSpan" onclick="displaySlide(1)"></span>
+            <span id="secondS" class="empty" onclick="displaySlide(2)"></span>
+            <span id="thirdS" onclick="displaySlide(3)"></span>
+            <span id="fourthS" onclick="displaySlide(4)"></span>
+            <span id="fifthS" onclick="displaySlide(5)"></span>
         </div>
     </div>
     <button id="prevBtn"><button>
