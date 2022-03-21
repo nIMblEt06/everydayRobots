@@ -85,6 +85,8 @@ body{
 .videoOk{
     display: none;
     transition: all 0.5s;
+    width: 70vw;
+    height: 80vh;
 }
 #Menu{
     transition: 0.3s ease;
