@@ -117,47 +117,47 @@ document.addEventListener('mousemove', (e) => {
 const Journey = document.querySelector('.journey');
 setInterval(() => {
     Journey.onmouseover = () => {
-            cursor.style.visibility= 'visible';
-            cursor.style.transform = "scale(2)";
+        cursor.style.visibility = 'visible';
+        cursor.style.transform = "scale(2)";
     }
     Journey.onmouseout = () => {
-        cursor.style.visibility= 'hidden';
+        cursor.style.visibility = 'hidden';
         cursor.style.transform = "scale(1)";
     }
-},1);
+}, 1);
 const wrap2 = document.querySelector('#wrap2');
 setInterval(() => {
     wrap2.onmouseover = () => {
-            cursor3.style.visibility= 'visible';
-            cursor3.style.transform = "scale(2)";
+        cursor3.style.visibility = 'visible';
+        cursor3.style.transform = "scale(2)";
     }
     wrap2.onmouseout = () => {
-        cursor3.style.visibility= 'hidden';
+        cursor3.style.visibility = 'hidden';
         cursor3.style.transform = "scale(1)";
     }
-},1);
+}, 1);
 const wrap1 = document.querySelector('#wrap1');
 setInterval(() => {
     wrap1.onmouseover = () => {
-            cursor2.style.visibility= 'visible';
-            cursor2.style.transform = "scale(2)";
+        cursor2.style.visibility = 'visible';
+        cursor2.style.transform = "scale(2)";
     }
     wrap1.onmouseout = () => {
-        cursor2.style.visibility= 'hidden';
+        cursor2.style.visibility = 'hidden';
         cursor2.style.transform = "scale(1)";
     }
-},1);
+}, 1);
 const imgCont = document.querySelector('.imgCont');
 setInterval(() => {
     imgCont.onmouseover = () => {
-            cursor4.style.visibility= 'visible';
-            cursor4.style.transform = "scale(2)";
+        cursor4.style.visibility = 'visible';
+        cursor4.style.transform = "scale(2)";
     }
     imgCont.onmouseout = () => {
-        cursor4.style.visibility= 'hidden';
+        cursor4.style.visibility = 'hidden';
         cursor4.style.transform = "scale(1)";
     }
-},1);
+}, 1);
 
 const head2 = document.querySelector('.heading2');
 function disp() {
@@ -195,6 +195,10 @@ setTimeout(disp, 500);
 
 let image = Array.from(document.getElementsByClassName('caroNavi'));
 let div = Array.from(document.getElementsByClassName('mapDiv'));
+let embedVideo = Array.from(document.getElementsByClassName('videoOk'));
+let playButton = Array.from(document.getElementsByClassName('playButton'));
+let info = Array.from(document.getElementsByClassName('info'));
+
 const slider = document.querySelector('#carousel-slide');
 let index = 1;
 let counter = 1;
@@ -204,31 +208,44 @@ image.forEach((element) => {
     element.addEventListener('click', (ele) => {
 
         counter = parseInt(ele.target.id);
-        div[index-1].classList.remove('special');
-        div[counter-1].classList.add('special');
-        
+        div[index - 1].classList.remove('special');
+        div[counter - 1].classList.add('special');
+
+
         if (index < counter) {
-            slider.style.transform = 'translateX(' + -74*index +'vw)';
+            slider.style.transform = 'translateX(' + -72 * index + 'vw)';
             slider.style.transition = "all 1s";
+            embedVideo[counter - 2].style.display = "none";
+            // embedVideo[counter - 2].pause();
+            image[counter - 2].style.display = "block";
+            info[counter - 2].style.display = "block";
             index++;
         }
         else if (index > counter) {
-            slider.style.transform = 'translateX(' + -74*(index-2) +'vw)';
+            slider.style.transform = 'translateX(' + -72 * (index - 2) + 'vw)';
             slider.style.transition = "all 1s";
+            embedVideo[counter].style.display = "none";
+            image[counter].style.display = "block";
+            info[counter].style.display = "block";
             index--;
         }
     })
-    element.addEventListener('mouseenter',(ele) => {
+    element.addEventListener('mouseover', (ele) => {
         counter = parseInt(ele.target.id);
+        cursor4.style.visibility = 'visible';
+        cursor4.style.transform = "scale(2)";
         if (index < counter) {
-            cursor4.style.visibility= 'visible';
-            cursor4.style.transform = "scale(2)";
             cursor4.style.transform = 'rotate(180)';
         }
-        else if (index > counter) {
-            cursor4.style.visibility= 'visible';
-            cursor4.style.transform = "scale(2)";
-        }
+    })
+})
+
+playButton.forEach((element) => {
+    element.addEventListener('click', (ele) => {
+        counter = parseInt(ele.target.id);
+        embedVideo[counter - 1].style.display = "block";
+        image[counter - 1].style.display = "none";
+        info[counter - 1].style.display = "none";
     })
 })
 // image.forEach((element) => {
@@ -262,35 +279,38 @@ image.forEach((element) => {
 div.forEach((element) => {
 
     element.addEventListener('click', (ele) => {
-        
-        counter=parseInt(ele.target.id);
-        div[index-1].classList.remove('special');
-        div[counter-1].classList.add('special');
-        index=counter;
 
-        slider.style.transform = 'translateX(' + -74*(index-1) +'vw)';
+        counter = parseInt(ele.target.id);
+        div[index - 1].classList.remove('special');
+        div[counter - 1].classList.add('special');
+        index = counter;
+
+        slider.style.transform = 'translateX(' + -72 * (index - 1) + 'vw)';
         slider.style.transition = "all 1s";
     })
 })
 
- // var text = document.querySelectorAll('.aniText');
-            // const strText = text.textContent;
-            // console.log(strText);
-            // const splitText = strText.split(" ").map(span);
+// var text = document.querySelectorAll('.aniText');
+// const strText = text.textContent;
+// console.log(strText);
+// const splitText = strText.split(" ").map(span);
 var offset = 0;
 const menuNav = document.getElementById("menuNav");
 setInterval(() => {
     offset = window.pageYOffset;
 }, 5);
 offset = window.pageYOffset;
-setInterval(() =>{
-    document.addEventListener('scroll', ()=>{
-    if(window.pageYOffset>offset){
-        Menu.style.opacity = "0";
-        
-    }
-    else{
-        Menu.style.opacity = "1";
-    }
-    
-},2)});
+setInterval(() => {
+    document.addEventListener('scroll', () => {
+        if (window.pageYOffset > offset) {
+            Menu.style.opacity = "0";
+
+        }
+        else {
+            Menu.style.opacity = "1";
+        }
+
+    }, 2)
+});
+
+

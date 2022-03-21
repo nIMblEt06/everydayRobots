@@ -82,6 +82,10 @@ body{
     }
         
 }
+.videoOk{
+    display: none;
+    transition: all 0.5s;
+}
 #Menu{
     transition: 0.3s ease;
 }
