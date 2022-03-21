@@ -87,6 +87,7 @@ body{
 }
 #tag{
     transition: color 0.7s ease;
+    transition: opacity 0.2s ease;
 }
 .moon a{
     text-decoration: none;
