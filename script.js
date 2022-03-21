@@ -206,14 +206,14 @@ let counter = 1;
 image.forEach((element) => {
 
     element.addEventListener('click', (ele) => {
-
+        
         counter = parseInt(ele.target.id);
         div[index - 1].classList.remove('special');
         div[counter - 1].classList.add('special');
 
 
         if (index < counter) {
-            slider.style.transform = 'translateX(' + -72 * index + 'vw)';
+            slider.style.transform = 'translateX(' + -74 * index + 'vw)';
             slider.style.transition = "all 1s";
             embedVideo[counter - 2].style.display = "none";
             // embedVideo[counter - 2].pause();
@@ -222,7 +222,7 @@ image.forEach((element) => {
             index++;
         }
         else if (index > counter) {
-            slider.style.transform = 'translateX(' + -72 * (index - 2) + 'vw)';
+            slider.style.transform = 'translateX(' + -74 * (index - 2) + 'vw)';
             slider.style.transition = "all 1s";
             embedVideo[counter].style.display = "none";
             image[counter].style.display = "block";
@@ -230,15 +230,15 @@ image.forEach((element) => {
             index--;
         }
     })
-    element.addEventListener('mouseover', (ele) => {
-        counter = parseInt(ele.target.id);
-        cursor4.style.visibility = 'visible';
-        cursor4.style.transform = "scale(2)";
-        if (index < counter) {
-            cursor4.style.transform = 'rotate(180)';
-        }
-    })
-})
+    // element.addEventListener('mouseover', (ele) => {
+    //     counter = parseInt(ele.target.id);
+    //     cursor4.style.visibility = 'visible';
+    //     cursor4.style.transform = "scale(2)";
+    //     if (index < counter) {
+    //         cursor4.style.transform = 'rotate(180)';
+    //     }
+//     })
+ })
 
 playButton.forEach((element) => {
     element.addEventListener('click', (ele) => {
@@ -285,7 +285,7 @@ div.forEach((element) => {
         div[counter - 1].classList.add('special');
         index = counter;
 
-        slider.style.transform = 'translateX(' + -72 * (index - 1) + 'vw)';
+        slider.style.transform = 'translateX(' + -74 * (index - 1) + 'vw)';
         slider.style.transition = "all 1s";
     })
 })
@@ -312,5 +312,3 @@ setInterval(() => {
 
     }, 2)
 });
-
-
