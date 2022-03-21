@@ -54,7 +54,7 @@
         <div class="heading2"><span class="aniText"> Helper robots <br> for a better <br> <span class="underlined">
                     everyday</span> </span></div>
         <div class="content" id="birth"><span>Born from X, <span class="moon"><a href="https://x.company">the moonshot
-                        factory</a></span>, and working alongside teams at Google, we’re building a new type of robot.
+                        factory</a></span>, and working alongside teams at Google, we're building a new type of robot.
                 One that can learn by itself, to help anyone with (almost) anything.</span></div>
     </div>
     <div class="video">
@@ -112,7 +112,7 @@
             </p>
             <br>
             <p>
-                Where solving many of life’s smallest problems will also help us address some of the world’s most
+                Where solving many of life's smallest problems will also help us address some of the world's most
                 profound ones. From the personal, like the support we might each need as we grow older, to the global,
                 as an ever-aging population changes the future of work for everyone.
             </p>
@@ -131,61 +131,85 @@
     <div id="story" class="reveal">
         Watch our story:
     </div>
-    <div class="carousel-container">
-        <div class="carousel-slide">
+    <div id="carousel-container">
+        <div id="carousel-slide">
             <div class="imgCont">
-                <img class="caroNavi" src="Assets/caro1.webp" alt="">
+                <img id="1"  class="caroNavi" src="Assets/caro1.webp" alt="">
                 <div class="info">
-                    <p>Prologue</p>
+                    <p class="slideIntro">Prologue</p>
                     <h2>Intoducing Everyday Robots</h2>
+                    <div class="playButton">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <p class="play" >3:25 - Play Video</p>
                 </div>
             </div>
             <div class="imgCont">
-                <img class="caroNavi onRight" src="Assets/caro2.webp" alt="">
+                <img id="2" class="caroNavi" src="Assets/caro2.webp" alt="">
                 <div class="info">
-                    <p>Chapter 1</p>
+                    <p class="slideIntro">Chapter 1</p>
                     <h2>The challenge of the everyday</h2>
+                    <div class="playButton">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <p class="play" >3:25 - Play Video</p>
                 </div>
             </div>
             <div class="imgCont">
-                <img class="caroNavi onRight" src="Assets/caro3.webp" alt="">
+                <img id="3" class="caroNavi" src="Assets/caro3.webp" alt="">
                 <div class="info">
-                    <p>Chapter 2</p>
+                    <p class="slideIntro">Chapter 2</p>
                     <h2>A robot that learns</h2>
+                    <div class="playButton">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <p class="play" >3:25 - Play Video</p>
                 </div>
             </div>
             <div class="imgCont">
-                <img class="caroNavi onRight" src="Assets/caro4.webp" alt="">
+                <img id="4" class="caroNavi" src="Assets/caro4.webp" alt="">
                 <div class="info">
-                    <p>Chapter 3</p>
+                    <p class="slideIntro">Chapter 3</p>
                     <h2>Training the first task</h2>
+                    <div class="playButton">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <p class="play" >3:25 - Play Video</p>
                 </div>
             </div>
             <div class="imgCont">
-                <img class="caroNavi onRight" src="Assets/caro5.webp" alt="">
+                <img id="5" class="caroNavi" src="Assets/caro5.webp" alt="">
                 <div class="info">
-                    <p>Chapter 4</p>
+                    <p class="slideIntro">Chapter 4</p>
                     <h2>Building with everyone</h2>
+                    <div class="playButton">
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                    <p class="play" >3:25 - Play Video</p>
                 </div>
             </div>
-            <!-- <div class="cursor4"> <i class = "fa fa-arrow-right"></i></div> -->
-        </div>  
+            <div class="cursor4"> <i class = "fa fa-arrow-right"></i></div>
+        </div>
         <div class="map">
-            <span id="firstS" class="activeSpan" onclick="displaySlide(1)"></span>
-            <span id="secondS" onclick="displaySlide(2)"></span>
-            <span id="thirdS" onclick="displaySlide(3)"></span>
-            <span id="fourthS" onclick="displaySlide(4)"></span>
-            <span id="fifthS" onclick="displaySlide(5)"></span>
+            <div class="mapDiv special" id="01">&nbsp;</div>
+            <div class="mapDiv" id="02">&nbsp;</div>
+            <div class="mapDiv" id="03">&nbsp;</div>
+            <div class="mapDiv" id="04">&nbsp;</div>
+            <div class="mapDiv" id="05">&nbsp;</div>
         </div>
     </div>
-    <button id="prevBtn"><button>
-            <button id="nextBtn"></button>
+
+    <button id="prevBtn">
+        <button>
+
+            <button id="nextBtn">
+            </button>
 
             <div id="roboMoon" class="anotherHeadingLMAO reveal">
                 <span>A moonshot for <br> robotics</span>
             </div>
             <div id="contentOof" class="centerj">
-                <div class="left">Today’s robots are really good at three things — strength, precision, and repetition.
+                <div class="left">Today's robots are really good at three things — strength, precision, and repetition.
                     But they are really bad at other things — understanding new spaces and environments, and doing more
                     than just one thing. Put simply, their very narrow capabilities come from the human who has
                     programmed them to solve just a single problem, in just one environment.
@@ -193,18 +217,17 @@
                         src="Assets/1-3_a-moonshot-for-robotics-V2-665116b15eb8d4faaeb2cbeafaa5f117.mp4"></video>
                 </div>
                 <div class="right">
-                    To bridge the gap between today’s single-purpose robots and tomorrow’s helper robots, we’re building
-                    robots that live in our world, and can learn by themselves. A multifaceted challenge that’s even
-                    harder than building a self-driving car because there are no rules of the road for robotics. <br>
-                    <br>
-
-                    We’re starting in the places where we spend most of our waking hours — the places where we work. But
-                    we’re not stopping there. We believe helper robots have the potential to ultimately help everyone,
-                    everywhere. From offices, to institutions of care, to eventually in our homes, they’ll make our
+                    To bridge the gap between today's single-purpose robots and tomorrow's helper robots, we're building
+                    robots that live in our world, and can learn by themselves. A multifaceted challenge that's even
+                    harder than building a self-driving car because there are no rules of the road for robotics.
+                    <br><br>
+                    We're starting in the places where we spend most of our waking hours — the places where we work. But
+                    we're not stopping there. We believe helper robots have the potential to ultimately help everyone,
+                    everywhere. From offices, to institutions of care, to eventually in our homes, they'll make our
                     lives easier by lending us a helping hand (or three).
                 </div>
             </div>
-            <footer id="footContainer">
+            <div id="footContainer">
                 <div class="discover">
                     Discover next
                 </div>
@@ -245,7 +268,7 @@
                 <div class="footer centera centerj">
                     Copyright 2021 X Development LLC. All rights reserved.
                 </div>
-            </footer>
+            </div>
             <script src="script.js"></script>
 
 </body>

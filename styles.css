@@ -310,8 +310,6 @@ body{
     padding-top: 12vh;
     padding-inline: 4vw;
     z-index: -2;
-    transition: opacity 0.4s cubic-bezier(0.6, 0, 0.2, 1);
-    /* position: relative; */
 }
 .discover{
     font-family: CalibreB;
@@ -567,7 +565,7 @@ body{
     transform: translate(16px,7px);
     font-size:9px;
 }
-.inactive:hover ~ .cursor4{
+.imgCont:hover ~ .cursor4{
     visibility: visible;
     transform: scale(2);
 }
@@ -577,45 +575,58 @@ body{
 .slide.active{
     cursor:default;
 }
-.map {
-    background-color: #11100e;
-    position: absolute;
-    margin-top: 5em;
-    margin-left: 16em;
-    
+#carousel-container{
+    overflow: hidden;
+    margin: 4rem 0;
 }
-
-.carousel-container{
-    width: 80%;
-    margin: 4rem 2rem;
-    padding-left: 3rem;
-}
-.carousel-slide{
+#carousel-slide{
+    margin-left: 15rem;
     display: flex;
-    width: 8000px;
+    gap: 4rem;
+    width: 350vw;
 }
 .imgCont{
-    width: 1200px;
-    margin-inline: 4rem; 
+    width: 70vw;
     position: relative;
-    padding-inline: 2rem;
 }
-.imgCont img{
-    width: 100%;
-    height: 640px;
-    margin-inline: 2rem;    
-    cursor: pointer;
+.caroNavi{
+    width: 70vw;
+    height: 80vh;
+    cursor: default;
 }
 .info{
     position: absolute;
     top: 205px;
     left: 200px;
-    color: white;  
+    color: white;   
 }
-.info p{
+.slideIntro{
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 20px;
+    font-family: CalibreB;
+}
+.playButton{
+    margin-top: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background:white;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.playButton:hover{
+    background-color: #ffad00;
+}
+.playButton i{
+    color: black;
+    font-size: 22px;
+    transform: translate(26px, 18px);   
+}
+.play{
+    margin-top: -40px;
+    margin-left: 80px;
+    font-size: 20px;
     font-family: CalibreB;
 }
 .info h2{
@@ -623,45 +634,20 @@ body{
     font-weight: 700;
     font-family: CalibreB;
 }
-.map span{
-    content: '';
-    width: 10px;
+.map {
+    margin: 5rem 0 0 20rem;
+    display: flex;
+    gap: 0.8rem;
+}
+.mapDiv{
+    cursor: pointer;
+    width: 20px;
     height: 10px;
-    border-radius: 50%;
-    margin-right: max(15px, 0.25rem);
-    border: none;
-    height: max(7px, 0.167rem);
-    border-radius: 100px;
-    display: block;
-    cursor: pointer;
-    background: #d5d0cf;
-    min-width: max(7px, 0.167rem);
+    border-radius: 10px;
+    background-color: rgb(213,208,207);
+    transition: all 0.4s;
 }
-#firstS{ 
-    position: absolute;
-    cursor: pointer;
-}
-#secondS{
-    position: absolute;
-    cursor: pointer;
-    transform: translateX(20px);
-}
-#thirdS{
-    position: absolute;
-    cursor: pointer;
-    transform: translateX(40px);
-}
-#fourthS{
-    position: absolute;
-    cursor: pointer;
-    transform: translateX(60px);
-}
-#fifthS{
-    position: absolute;
-    cursor: pointer;
-    transform: translateX(80px);
-}
-.activeSpan{
-    background-color: #ffad00;
-    width: 30px;
+.special{
+    width: 50px;
+    background-color: rgb(255,173,0);
 }
