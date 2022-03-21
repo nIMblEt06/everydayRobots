@@ -16,7 +16,7 @@ const caroImages = document.querySelectorAll('.carousel-slide img');
 
 const nextNav = document.querySelectorAll('.inactive');
 let counter = 0;
-const size = 1395;
+const size = 1300;
 caroImages[counter].style.cursor = "default";
 //parallax
 prevBtn.style.visibility = "hidden";
@@ -32,7 +32,7 @@ function nextSlide(){
         nextBtn.style.visibility = "hidden";
     }
 };
-prevBtn.addEventListener('click', prevSlide);
+// prevBtn.addEventListener('click', prevSlide);
 
 function prevSlide(){
     carouselSlide.style.transition = "transform 0.9s ease-out";
@@ -45,10 +45,13 @@ function prevSlide(){
         prevBtn.style.visibility = "hidden";
     }
 }
+const sliders = document.querySelectorAll('.map');
 function displaySlide(n){
     carouselSlide.style.transition = "transform 0.9s ease-out";
     carouselSlide.style.transform = 'translateX('+(- size * (n-1)) + 'px)';
-    this.classList.add("active");
+    sliders[n].classList.add("activeSpan");
+    
+    // .classList.add("active");
 }
 // function changeSlide(){
 //     console.log(this.classList);
@@ -75,7 +78,7 @@ function displaySlide(n){
 //         }
 //     }
 //     }
-    
+
 const cursor4 = document.querySelector('.cursor4');
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.pageX + 'px';
@@ -83,7 +86,7 @@ document.addEventListener('mousemove', (e) => {
 })
 
 
-window.addEventListener('scroll', function (e) {
+window.addEventListener('scroll', function () {
     const paral = document.querySelector('.imgHolder');
     var scrolled = window.pageYOffset - 3500;
     var rate = -(scrolled * 0.30);
@@ -96,7 +99,6 @@ window.addEventListener('scroll', reveal);
 function reveal() {
 
     var reveals = document.querySelectorAll('.reveal');
-    
     for (var i = 0; i < reveals.length; i++) {
 
         var windowHeight = window.innerHeight;
@@ -186,6 +188,47 @@ document.addEventListener('mousemove', (e) => {
     cursor3.style.left = e.pageX +  'px';
     cursor3.style.top = e.pageY + (-window.scrollY) + 'px';
 })
+const Journey = document.querySelector('.journey');
+setInterval(() => {
+    Journey.onmouseover = () => {
+            cursor.style.visibility= 'visible';
+            cursor.style.transform = "scale(2)";
+    }
+    Journey.onmouseout = () => {
+        cursor.style.visibility= 'hidden';
+        cursor.style.transform = "scale(1)";
+    }
+});
+const wrap2 = document.querySelector('#wrap2');
+setInterval(() => {
+    wrap2.onmouseover = () => {
+            cursor3.style.visibility= 'visible';
+            cursor3.style.transform = "scale(2)";
+    }
+    wrap2.onmouseout = () => {
+        cursor3.style.visibility= 'hidden';
+        cursor3.style.transform = "scale(1)";
+    }
+});
+const wrap1 = document.querySelector('#wrap1');
+setInterval(() => {
+    wrap1.onmouseover = () => {
+            cursor2.style.visibility= 'visible';
+            cursor2.style.transform = "scale(2)";
+    }
+    wrap1.onmouseout = () => {
+        cursor2.style.visibility= 'hidden';
+        cursor2.style.transform = "scale(1)";
+    }
+});
+// function displayCursor(){
+//     cursor.style.visibility= 'visible';
+//     cursor.style.transform = "scale(2)";
+// }
+// function hideCursor(){
+//     cursor.style.visibility= 'hidden';
+//     cursor.style.transform = "scale(1)";
+// }
 // const cursor4 = document.querySelector('.cursor4');
 // document.addEventListener('mousemove', (e) => {
 //     cursor3.style.left = e.pageX + 'px';

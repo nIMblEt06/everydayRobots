@@ -310,6 +310,8 @@ body{
     padding-top: 12vh;
     padding-inline: 4vw;
     z-index: -2;
+    transition: opacity 0.4s cubic-bezier(0.6, 0, 0.2, 1);
+    /* position: relative; */
 }
 .discover{
     font-family: CalibreB;
@@ -529,10 +531,10 @@ body{
     transform: translate(16px,7px);
     font-size:9px;
 }
-.naviW:hover ~ .cursor2{
+/* .naviW:hover ~ .cursor2{
     visibility: visible;
     transform: scale(2);
-}
+} */
 .cursor3{
     position: fixed;
     width: 40px;
@@ -547,10 +549,10 @@ body{
     transform: translate(16px,7px);
     font-size:9px;
 }
-.naviW:hover ~ .cursor3{
+/* .naviW:hover ~ .cursor3{
     visibility: visible;
     transform: scale(2);
-}
+} */
 .cursor4{
     position: fixed;
     width: 40px;
@@ -580,6 +582,7 @@ body{
     position: absolute;
     margin-top: 5em;
     margin-left: 16em;
+    
 }
 
 .carousel-container{
@@ -595,35 +598,44 @@ body{
     width: 1200px;
     margin-inline: 4rem; 
     position: relative;
-    padding-inline: 4rem;
+    padding-inline: 2rem;
 }
 .imgCont img{
-    width: 110%;
-    height: 720px;
-    margin-inline: 4rem;    
+    width: 100%;
+    height: 640px;
+    margin-inline: 2rem;    
     cursor: pointer;
 }
 .info{
     position: absolute;
     top: 205px;
     left: 200px;
-    color: white;   
+    color: white;  
 }
 .info p{
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 20px;
+    font-family: CalibreB;
 }
 .info h2{
     font-size: 40px;
     font-weight: 700;
+    font-family: CalibreB;
 }
 .map span{
     content: '';
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #888887;
+    margin-right: max(15px, 0.25rem);
+    border: none;
+    height: max(7px, 0.167rem);
+    border-radius: 100px;
+    display: block;
+    cursor: pointer;
+    background: #d5d0cf;
+    min-width: max(7px, 0.167rem);
 }
 #firstS{ 
     position: absolute;
